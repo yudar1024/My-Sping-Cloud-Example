@@ -1,0 +1,21 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9090/eurekaserver1/eureka/
+  instance:
+#  eureka 将通过 eureka.instance.name 寻找 配置服务器，在处理问题中。使用service-id 属性来指定配置服务，值 为appname的值
+    appname: eureka-config-server
+
+spring:
+    application:
+        name: eureka-config-server
+    cloud:
+        config:
+            discovery:
+                enabled: true
+            name: eureka-config-server
+            server:
+              git:
+                uri: https://github.com/yudar1024/config-repo.git
+                search-paths: '{application}'
+                basedir: d:/temp

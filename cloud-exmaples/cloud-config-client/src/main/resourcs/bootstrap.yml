@@ -1,0 +1,12 @@
+#spring.cloud.config.discovery.enabled=true
+#一个应用的配置文件名必须和应用的名称一致，在本例中，使用configclient1.properties 才能被正常读取，如果启用profile，会读取相应带profile后缀的文件，比如本配置启用dev 之后，读取的文件为configclient1-dev.properties
+spring:
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://localhost:8080
+      override-none: true
+
+
+

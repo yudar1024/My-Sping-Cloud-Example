@@ -1,0 +1,28 @@
+---
+#Status Page and Health Indicator
+#pring 默认的url为/info 和 /health
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9090/eurekaserver1/eureka/
+  instance:
+    metadata-map:
+      instanceId:${spring.application.name}:${spring.application.instance_id:${random.value}}
+#   通过http://localhost:9100/eurekaclient1/admin/health 访问
+    health-check-url-path: ${server.context-path}/${management.context-path}/health
+    status-page-url-path: ${server.context-path}/${management.context-path}/info
+
+server:
+  port: 9100
+  context-path: /eurekaclient1
+
+spring:
+  application:
+    name: eurekaclient1
+management:
+  context-path: /admin
+
+
+
+
