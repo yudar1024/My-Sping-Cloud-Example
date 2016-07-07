@@ -1,9 +1,10 @@
+# 如果配置服务需要通过eureka 进行 微服务自动发现，eureka 相关配置，以及属性文件的仓库，都必须配置在bootstrap.yml 文件中。如果配置在application.yml 中会失效。
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:9090/eurekaserver1/eureka/
   instance:
-#  eureka 将通过 eureka.instance.name 寻找 配置服务器，在处理问题中。使用service-id 属性来指定配置服务，值 为appname的值
+#  eureka client将通过 eureka.instance.name 寻找配置服务器。在需要使用配置服务的client服务中，使用service-id 属性来指定配置服务，值 为appname的值
     appname: eureka-config-server
 
 spring:

@@ -1,3 +1,4 @@
+# 如果eureka client 想通过 发现服务器获取配置服务器信息，eureka 相关配置，以及属性文件的仓库，都必须配置在bootstrap.yml 文件中。如果配置在application.yml 中会失效。
 eureka:
   client:
     serviceUrl:
