@@ -6,6 +6,10 @@ eureka:
   instance:
 #  eureka client将通过 eureka.instance.name 寻找配置服务器。在需要使用配置服务的client服务中，使用service-id 属性来指定配置服务，值 为appname的值
     appname: eureka-config-server
+    metadata-map:
+#    如果 config servier 配置 server.context-path , 需要在metadata-map 中，配置configPath 为server.context-path 的值。标明在发现配置服务的时候，配置服务器使用了上下文，
+#    如果 config server 没有配置context-path，则不需要使用metadata-map.configPath 属性
+      configPath: /eureka-config-server
 
 spring:
     application:
