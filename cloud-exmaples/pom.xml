@@ -12,6 +12,7 @@
         <module>eureka-client-1</module>
         <module>eureka-config-server</module>
         <module>eureka-config-client</module>
+        <module>hystrix-clients</module>
     </modules>
     <packaging>pom</packaging>
 
