@@ -12,4 +12,3 @@ spring:
             discovery:
                 enabled: true
                 service-id: eureka-config-server
-#            name: eureka-config-server

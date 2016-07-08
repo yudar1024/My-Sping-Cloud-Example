@@ -8,11 +8,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.roger.spring</groupId>
-    <artifactId>hystrix-clients</artifactId>
+    <artifactId>cloud-hystrix-dashbord</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>hystrix-clients</name>
+    <name>cloud-hystrix-dashbord</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -20,16 +20,11 @@
     </properties>
 
     <dependencies>
-        <!--暴露各种指标-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
+        <!--如果是用turbine，hystrix-dashboard 需要从各个hystrix client 移除，降监控界面转移到turbine服务器中-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-hystrix</artifactId>
+            <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
         </dependency>
-
         <!--turbine config in client side
         <dependency>
             <groupId>org.springframework.cloud</groupId>

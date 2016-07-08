@@ -1,18 +1,20 @@
+debug: true
 server:
   port: 9090
   context-path: /eurekaserver1
+  
 eureka:
-  instance:
-    hostname: localhost
+#  instance:
+#    hostname: localhost
 #    metadata-map:
 #    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
   client:
 #    自身不注册为服务 默认为true为standalone 模式
     registerWithEureka: false
 #    不获取注册服务上的其他服务信息 默认为true，false 为standalone 模式
-#    fetchRegistry: false
+    fetchRegistry: false
     service-url:
-       defaultZone: http://${eureka.instance.hostname}:${server.port}/${server.context-path}/eureka/
+       defaultZone: http://localhost:${server.port}/${server.context-path}/eureka/
 spring:
   application:
     name: eurekaserver1

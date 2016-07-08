@@ -13,6 +13,9 @@
         <module>eureka-config-server</module>
         <module>eureka-config-client</module>
         <module>hystrix-clients</module>
+        <module>cloud-turbine</module>
+        <module>hystrix-client-2</module>
+        <module>cloud-hystrix-dashbord</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -21,6 +24,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <turbine-core.version>2.0.0-DP.2</turbine-core.version>
     </properties>
 
     <parent>
