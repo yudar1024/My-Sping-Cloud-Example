@@ -1,0 +1,15 @@
+server:
+  port: 6100
+  
+spring:
+  application:
+    name: cloud-turbine-push
+
+turbine:
+  app-config: hystrix-clients
+#  这里用来指定turbine的cluster name, 调试了很久才发现是这里的写法问题,meta['customer']这种是用于AWS等云平台的, "'customer'"这种是用于普通指定的.
+  cluster-name-expression: "'default'"
+
+logging:
+  level: 
+    root: debug

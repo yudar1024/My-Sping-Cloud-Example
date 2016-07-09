@@ -1,0 +1,7 @@
+eureka: 
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9090/eurekaserver1/eureka/
+#  instance:
+#    appname: hystrix-clients
+    

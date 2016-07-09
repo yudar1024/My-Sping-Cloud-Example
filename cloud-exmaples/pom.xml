@@ -16,6 +16,10 @@
         <module>cloud-turbine</module>
         <module>hystrix-client-2</module>
         <module>cloud-hystrix-dashbord</module>
+        <module>hystrix-clients-push</module>
+        <module>hystrix-client-push-2</module>
+        <module>cloud-turbine-push</module>
+
     </modules>
     <packaging>pom</packaging>
 
