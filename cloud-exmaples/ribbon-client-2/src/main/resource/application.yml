@@ -1,0 +1,7 @@
+server:
+  port: 6700
+
+spring: 
+  application: 
+    name: ribbon-client
+  

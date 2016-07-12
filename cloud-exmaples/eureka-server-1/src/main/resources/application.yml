@@ -12,10 +12,13 @@ eureka:
 #    自身不注册为服务 默认为true为standalone 模式
     registerWithEureka: false
 #    不获取注册服务上的其他服务信息 默认为true，false 为standalone 模式
-    fetchRegistry: false
+    fetchRegistry: true
     service-url:
        defaultZone: http://localhost:${server.port}/${server.context-path}/eureka/
+    registry-fetch-interval-seconds: 2
+  instance:
+    lease-renewal-interval-in-seconds: 2
+    lease-expiration-duration-in-seconds: 10
 spring:
   application:
     name: eurekaserver1
-

@@ -1,0 +1,9 @@
+eureka: 
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9090/eurekaserver1/eureka/
+    registry-fetch-interval-seconds: 2
+  instance:
+    lease-renewal-interval-in-seconds: 3
+#    appname: hystrix-clients
+    
