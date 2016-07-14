@@ -21,6 +21,8 @@
         <module>cloud-turbine-push</module>
         <module>ribbon-client-1</module>
         <module>ribbon-client-2</module>
+        <module>feign-client-ha-invoker</module>
+        <module>feign-eureka-server</module>
     </modules>
     <packaging>pom</packaging>
 
