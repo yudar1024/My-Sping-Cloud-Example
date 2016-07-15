@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: HelloServer
+
+server:
+  port: 7111
+  
