@@ -1,0 +1,23 @@
+server:
+  port: 9100
+
+info:
+  component: Zuul Server
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+
+zuul:
+  routes:
+    ribbon-client: /ribbon/**
+
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: DEBUG

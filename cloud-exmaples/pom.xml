@@ -23,6 +23,8 @@
         <module>ribbon-client-2</module>
         <module>feign-client-ha-invoker</module>
         <module>feign-eureka-server</module>
+        <module>zuul-server</module>
+        <module>Sleuth</module>
     </modules>
     <packaging>pom</packaging>
 
