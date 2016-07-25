@@ -1,0 +1,23 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        #channelName 与 @Output("output_channel") 注解中申明的名字要一致
+        output_channel:
+         #destination，或者可以认为是发布－订阅模型里面的topic
+          destination: mydest
+          binder: rabbit1
+        #channelName 元素本身要与与 @Input("input_channel") 注解中申明的名字要一致
+        input_channel:
+          destination: myinput
+          binder: rabbit1
+      binders:
+        rabbit1:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+              #rabbitMQ服务器地址
+                host: localhost
+                #rabbitMQ服务器端口
+                port: 5672
