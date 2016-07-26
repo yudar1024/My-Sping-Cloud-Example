@@ -32,9 +32,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Random;
 import java.util.concurrent.Callable;
 
-/**
- * @author Spencer Gibb
- */
+
 @RestController
 public class SampleController implements
         ApplicationListener<EmbeddedServletContainerInitializedEvent> {

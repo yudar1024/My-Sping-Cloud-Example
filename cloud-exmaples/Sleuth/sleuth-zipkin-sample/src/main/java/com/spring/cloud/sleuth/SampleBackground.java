@@ -23,9 +23,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Random;
 
-/**
- * @author Spencer Gibb
- */
+
 @Component
 public class SampleBackground {
 
