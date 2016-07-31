@@ -1,5 +1,9 @@
 package com.roger.spring;
 
+import com.netflix.loadbalancer.AbstractLoadBalancerRule;
+import com.netflix.loadbalancer.BestAvailableRule;
+import com.netflix.loadbalancer.IPing;
+import com.netflix.niws.loadbalancer.NIWSDiscoveryPing;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -75,5 +79,14 @@ public class RibbonInvoker {
 //        }
         String ccc=client.getForObject("http://ribbon-client/say",String.class);
         return res+ccc;
+    }
+    @Bean
+    public IPing getNIWSDiscoveryPing(){
+        return new NIWSDiscoveryPing();
+    }
+//load balance 的策略。
+    @Bean
+    public AbstractLoadBalancerRule getAbstractLoadBalancerRule(){
+        return new BestAvailableRule();
     }
 }
